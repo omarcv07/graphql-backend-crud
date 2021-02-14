@@ -309,7 +309,7 @@ const Mutation = new GraphQLObjectType({
                 if (!removedHobby) {
                     throw new("Error");
                 }
-
+ 
                 return removedHobby;
             }
         },
