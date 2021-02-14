@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 
 const app = express();
 
-mongoose.connect('mongodb+srv://dbUser:123@cluster0.avndv.mongodb.net/graphql-course?retryWrites=true&w=majority', { 
+mongoose.connect('mongodb+srv://useruknown:passworduknown@cluster0.avndv.mongodb.net/graphql-course?retryWrites=true&w=majority', { 
     useNewUrlParser: true, 
     useUnifiedTopology: true
 })
