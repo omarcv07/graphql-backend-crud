@@ -5,8 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "author": "Omar Cardenas",
   "license": "ISC",
@@ -18,8 +17,5 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.11.15",
     "nodemon": "^2.0.6"
-  },
-  "scripts": {
-    "start": "node index.js"
   }
 }
