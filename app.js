@@ -1,16 +1,30 @@
-import express from 'express';
-import { graphqlHTTP } from 'express-graphql';
+const express = require('express');
+const { graphqlHTTP } = require('express-graphql');
+const mongoose = require('mongoose');
 
-import userSchema from './schema/schema.js';
-import testSchema from './schema/types_schema.js';
+const userSchema = require('./schema/schema.js');
+const testSchema = require('./schema/types_schema.js');
+
+const cors = require('cors');
+const port = process.env.PORT || 4000
 
 const app = express();
 
+mongoose.connect('mongodb+srv://dbUser:123@cluster0.avndv.mongodb.net/graphql-course?retryWrites=true&w=majority', { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+})
+mongoose.connection.once('open', () => {
+    console.log('MongoDB was connected successfully')
+})
+
+app.use(cors());
+
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
-    schema: testSchema
+    schema: userSchema
 }));
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log('localhost running on port' + "4000");
 });

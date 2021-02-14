@@ -1,4 +1,4 @@
-import {
+const {
     GraphQLObjectType,
     GraphQLSchema,
     GraphQLString,
@@ -7,7 +7,7 @@ import {
     GraphQLInt,
     GraphQLFloat, 
     GraphQLNonNull
-} from 'graphql';
+} = require('graphql'); 
 
 // Scalar Type
 /* 
@@ -61,4 +61,4 @@ const testSchema = new GraphQLSchema({
     query: RootQuery,
 });
 
-export default testSchema;
+module.exports = testSchema;
