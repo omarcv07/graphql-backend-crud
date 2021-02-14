@@ -41,7 +41,7 @@ const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     description: 'Descripcion',
     fields: {
-        person: {
+        person: { 
             type: Person,
             resolve(parent, args) {
                 let personObj = {
