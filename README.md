@@ -1,4 +1,4 @@
-# User-REST-API
+# GraphQL CRUD
 
 Features:
 - Create, get, edit, and delete hobbies, posts and users.
